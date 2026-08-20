@@ -330,53 +330,63 @@ body {
 @media (max-width: 768px) {
   .header {
     height: auto;
-    padding: 15px 10px;
+    padding: 8px 10px;
     justify-content: center;
+    gap: 5px;
   }
 
   .header-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     align-items: center;
   }
 
   .header-brand {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .header-title h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .header-title p {
-    text-align: center;
-    font-size: 12px;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
   }
 
   .header-logo {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .header-title p {
+    display: none; /* скрываем подзаголовок на маленьких экранах для экономии места */
   }
 
   .header-actions {
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
-  .contacts {
-    font-size: 13px;
-    white-space: normal;
+  .lang-switcher {
+    gap: 4px;
   }
 
   .lang-btn {
     padding: 4px 10px;
     font-size: 11px;
+    border-width: 1.5px;
+  }
+
+  .contacts {
+    font-size: 12px;
+    white-space: nowrap;
   }
 
   .container {
-    padding-top: 120px;
+    padding-top: 100px;
   }
 }
