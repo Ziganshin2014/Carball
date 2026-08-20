@@ -390,3 +390,10 @@ body {
     padding-top: 100px;
   }
 }
+
+.lang-btn.active,
+.lang-btn.active:hover {
+  background: #ffd700 !important;
+  color: #1a1a2e !important;
+  border-color: #ffd700 !important;
+}
