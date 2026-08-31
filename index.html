@@ -229,6 +229,26 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <div id='widget_place' style="width: auto;"></div>
+    <script type="text/javascript">
+        (function () {
+            window.WIDGET_config_bg_color = '#ffffff';
+            window.WIDGET_config_btn_color = '#0d4fc8';
+            window.WIDGET_email = 'info@carball.ru';
+            window.WIDGET_phone = '+7 (931) 777-43-77';
+            window.WIDGET_result_count = 10;
+            window.WIDGET_config_personal_key = '26cfc50439f9e73dd5b4d7d515798b8c';
+            window.WIDGET_show_prices = true;
+            window.WIDGET_price_percentage = 0;
+            window.WIDGET_element = 'widget_container';
+            window.WIDGET_currency = "rub"
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = "https://static.f-avto.by/widgets/catalog/legacy.js";
+            document.getElementById('widget_place').appendChild(script);
+        })();
+    </script>
 </body>
 
 </html>
