@@ -532,9 +532,7 @@ body {
     display: none;
     /* останется только иконка */
   }
-
-  .max-text,
-  .tg-text {
+    .tg-text {
     display: none;
   }
 }
