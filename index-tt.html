@@ -25,9 +25,41 @@
           <a href="index.html" class="lang-btn ">🇷🇺 RU</a>
           <a href="index-tt.html" class="lang-btn active">🇹🇹 ТАТ</a>
         </div>
+        <div class="header-search" id="headerSearch">
+          <form id="searchForm" class="search-form">
+            <input type="text" id="searchInput" placeholder="Марка, модель яки VIN кертегез" required>
+            <button type="submit">Эзләү</button>
+          </form>
+          <div id="searchMessage" class="search-message" style="display: none;">
+            <p>Кирәкле деталь табылмады? Гариза калдырыгыз, без аны табарбыз.</p>
+            <a href="mailto:info@carball.ru?subject=Деталь%20сорау" class="request-btn">Гариза калдырырга</a>
+          </div>
+        </div>
         <div class="contacts">
           📞 <a href="tel:+79317774377" class="phone-link">+7 (931) 777-43-77</a> &nbsp;|&nbsp;
-          ✉️ <a href="mailto:info@carball.ru">info@carball.ru</a>
+          <p>
+            <a href="https://max.ru/u/f9LHodD0cOKyW_PyMCn3TG8A-3kUS9UyCfr7wXo9w1tSLUURU4xlGLUxYQs" target="_blank"
+              class="max-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                style="vertical-align: middle;">
+                <circle cx="12" cy="12" r="10" fill="#6C5CE7" />
+                <path d="M7 9L12 13L17 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M7 15H17" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Язырга MAX
+            </a>
+          </p>
+          <a href="https://t.me/RafigZelenodolsk" target="_blank" class="tg-link" title="Написать в Telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              style="vertical-align: middle;">
+              <circle cx="12" cy="12" r="11" fill="#229ED9" />
+              <path d="M6.5 11.5L17.5 6.5L14.5 17.5L11 13L6.5 11.5Z" fill="white" />
+              <path d="M11 13L14.5 17.5L17.5 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span class="tg-text">Telegram</span>
+          </a>
         </div>
       </div>
     </div>
@@ -242,5 +274,12 @@
       script.src = "https://static.f-avto.by/widgets/catalog/legacy.js";
       document.getElementById('widget_place').appendChild(script);
     })();
+    document.getElementById('searchForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Можно получить значение из input, если нужно
+      // const query = document.getElementById('searchInput').value.trim();
+      document.getElementById('searchMessage').style.display = 'inline-block';
+      this.style.display = 'none'; // скрываем форму поиска
+    });
   </script>
 </body>
