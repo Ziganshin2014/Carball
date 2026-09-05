@@ -522,17 +522,33 @@ body {
   .header-search {
     margin-top: 5px;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
+  /* Ограничиваем ширину формы */
   .search-form {
     flex-direction: column;
     gap: 6px;
+    width: 100%;
+    max-width: 320px;
+    /* компактная ширина на телефоне */
+    margin: 0 auto;
   }
 
-  .search-form input,
-  .search-form button.small-btn {
+  .search-form input {
     width: 100%;
     max-width: 100%;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .search-form button.small-btn {
+    width: auto;
+    max-width: none;
+    align-self: center;
+    padding: 8px 16px;
+    font-size: 12px;
   }
 
   .container {
