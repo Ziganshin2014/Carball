@@ -526,36 +526,40 @@ body {
     justify-content: center;
   }
 
-  /* Ограничиваем ширину формы */
+  /* Обычная форма, как было раньше */
   .search-form {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* строка: поле + кнопка */
+    align-items: center;
     gap: 6px;
-    width: 100%;
-    max-width: 320px;
-    /* компактная ширина на телефоне */
-    margin: 0 auto;
+    width: auto;
+    max-width: none;
+    margin: 0;
   }
 
   .search-form input {
-    width: 100%;
-    max-width: 100%;
+    width: auto;
+    flex: 1;
     font-size: 14px;
-    padding: 10px 14px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    min-width: 0;
   }
 
   .search-form button.small-btn {
     width: auto;
-    max-width: none;
-    align-self: center;
-    padding: 8px 16px;
+    flex-shrink: 0;
+    padding: 8px 14px;
     font-size: 12px;
+    border-radius: 25px;
+    white-space: normal;
+    max-width: 160px;
   }
 
   .container {
     padding-top: 220px;
   }
 
-  /* Текст MAX и Telegram виден на мобильных */
   .max-text,
   .tg-text {
     display: inline;
