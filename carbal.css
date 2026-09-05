@@ -28,11 +28,11 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  min-height: 100px; /* было height: 100px; */
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px; /* добавлен вертикальный отступ */
+  padding: 10px 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -525,12 +525,14 @@ body {
   }
 
   .container {
-    padding-top: 200px; /* больше, чтобы не перекрывало высокую шапку */
+    padding-top: 200px;
   }
 
+  /* ВАЖНО: текст MAX и Telegram виден на мобильных */
   .max-text,
   .tg-text {
-    display: none; /* оставляем только иконки */
+    display: inline;
+    font-size: 13px;
   }
 }
 
